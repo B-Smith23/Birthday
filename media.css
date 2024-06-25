@@ -2,15 +2,19 @@
   body {
     overflow: hidden;
   }
-
+  .banner h1 .banner-msg {
+    font-size: 7.5rem;
+  }
   .main {
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .msg {
     margin-top: 0;
+    margin-bottom: 2vw;
+    font-size: 3rem;
   }
   .container {
-    width: 100vw;
+    width: 95vw;
     padding: 1rem;
   }
   .envelope-wrapper {
@@ -91,6 +95,35 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 98vw;
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #surprise_video {
+    width: 100%;
+  }
+  .banner h1 .banner-msg {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .surprise-container p {
+    margin: 0;
+  }
+
+  .btn {
+    margin: 0;
+  }
+
+  #surprise_video {
+    margin-bottom: 1rem;
+    height: 400px;
+    width: auto;
+  }
+
+  .letter {
+    height: 80% !important;
   }
 }
