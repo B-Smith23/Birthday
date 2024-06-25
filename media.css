@@ -1,0 +1,96 @@
+@media screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .main {
+    justify-content: space-around;
+  }
+  .msg {
+    margin-top: 0;
+  }
+  .container {
+    width: 100vw;
+    padding: 1rem;
+  }
+  .envelope-wrapper {
+    width: 94.5vw;
+    margin: 0 auto;
+    margin-bottom: -5rem;
+  }
+  .envelope-wrapper > .envelope {
+    width: 95vw;
+    height: 65vw;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+  .envelope-wrapper > .envelope::before {
+    border-top: 40vw solid var(--envelope-tab);
+    border-right: 47.5vw solid transparent;
+    border-left: 47.5vw solid transparent;
+  }
+  .envelope-wrapper > .envelope::after {
+    border-top: 40vw solid transparent;
+    border-right: 47.5vw solid var(--envelope-cover);
+    border-bottom: 26vw solid var(--envelope-cover);
+    border-left: 47.5vw solid var(--envelope-cover);
+  }
+  .envelope > .letter {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @keyframes show-msg {
+    0% {
+      transform: translate(-50%, -2vw);
+      bottom: 100px;
+      -webkit-transform: translate(-50%, -2vw);
+      -moz-transform: translate(-50%, -2vw);
+      -ms-transform: translate(-50%, -2vw);
+      -o-transform: translate(-50%, -2vw);
+    }
+    50% {
+      bottom: 30rem;
+    }
+
+    100% {
+      height: 75vw;
+      width: 65vw;
+      min-height: 400px;
+      bottom: 0;
+      z-index: 20;
+      transform: scale(1.2) translate(-41%, -7vw);
+    }
+  }
+
+  @keyframes hide-msg {
+    0% {
+      z-index: 20;
+      width: 65vw;
+      height: 95%;
+      min-height: 400px;
+      bottom: 50px;
+      transform: scale(1.2) translate(-41%, -7vw);
+    }
+    50% {
+      bottom: 30rem;
+    }
+    100% {
+      transform: translate(-50%, -2vw);
+      bottom: 0px;
+      z-index: 0;
+      height: 80%;
+      -webkit-transform: translate(-50%, -2vw);
+      -moz-transform: translate(-50%, -2vw);
+      -ms-transform: translate(-50%, -2vw);
+      -o-transform: translate(-50%, -2vw);
+    }
+  }
+
+  .surprise-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 98vw;
+  }
+}
